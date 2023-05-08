@@ -1,0 +1,36 @@
+.link-underline {
+  position: relative;
+}
+
+.link-underline:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: linear-gradient(transparent, transparent),
+    linear-gradient(to right, #48abfb, #2b4ff1);
+  transition: width 0.25s ease;
+  -webkit-transition: width 0.25s ease;
+}
+
+.link-underline:hover:after {
+  width: 100%;
+  left: 0;
+  background: linear-gradient(transparent, transparent),
+    linear-gradient(to right, #48abfb, #2b4ff1);
+}
+
+.background-grid {
+  position: relative;
+}
+.background-grid:after {
+  background-image: linear-gradient(
+      rgba(203, 196, 196, 0.7) 0.1em,
+      transparent 0.1em
+    ),
+    linear-gradient(90deg, rgba(163, 167, 163, 0.7) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+}
